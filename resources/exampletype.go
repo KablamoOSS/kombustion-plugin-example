@@ -1,9 +1,9 @@
 package resources
 
 import (
-	yaml "bitbucket.org/kablamo-dev/go-yaml"
-	"bitbucket.org/kablamo-dev/kombustion/pluginParsers/resources"
-	"bitbucket.org/kablamo-dev/kombustion/types"
+	yaml "github.com/KablamoOSS/yaml"
+	"github.com/KablamoOSS/kombustion/pluginParsers/resources"
+	"github.com/KablamoOSS/kombustion/types"
 )
 
 type MyConfig struct {

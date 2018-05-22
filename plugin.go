@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bitbucket.org/kablamo-dev/kombustion/plugins/kombustion-plugin-boilerplate/resources"
-	"bitbucket.org/kablamo-dev/kombustion/types"
+	"github.com/KablamoOSS/kombustion/plugins/kombustion-plugin-boilerplate/resources"
+	"github.com/KablamoOSS/kombustion/types"
 )
 
 var Resources = map[string]types.ParserFunc{
