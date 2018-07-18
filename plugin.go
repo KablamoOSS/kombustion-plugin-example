@@ -26,12 +26,12 @@ func Register() []byte {
 	return api.RegisterPlugin(types.Config{
 		Name:    name,
 		Version: version,
-		Prefix:  "Kablamo",
+		Prefix:  "Kablamo::Example",
 		Help: types.Help{
 			Description: "An example plugin to create a log group",
 			TypeMappings: []types.TypeMapping{
 				{
-					Name:        "Example::Log",
+					Name:        "Log",
 					Description: "Creates a Log Group.",
 					Config:      resources.LogConfig{},
 				},
@@ -45,7 +45,7 @@ var Resources = map[string]func(
 	name string,
 	data string,
 ) []byte{
-	"Example::Log": api.RegisterResource(resources.ParseExampleLog),
+	"Log": api.RegisterResource(resources.ParseExampleLog),
 }
 
 // Outputs for this plugin
