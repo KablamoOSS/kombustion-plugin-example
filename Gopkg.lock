@@ -10,8 +10,8 @@
     "pkg/plugins/api/types",
     "types"
   ]
-  revision = "ac65ec58c18eb07cbdc8f88cdc127927ba4f3ab9"
-  version = "v0.2.4"
+  revision = "0ebddf558ca50461c69aa81e89eab988786d94a2"
+  version = "v0.3.0"
 
 [[projects]]
   name = "github.com/KablamoOSS/yaml"
@@ -59,6 +59,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b2f62347e96cbb4a7de9678518167068f1afa2faa79d92118b49bd73aac1b590"
+  inputs-digest = "5e062e2d766a34ea8ea3a4609e6dd7c0c9958b30c798c242c389da4f94aca2fc"
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -1,3 +1,3 @@
-# Kombustion Plugin Boilerplate
+# Kombustion Plugin Example
 
-See https://kombustion.io/#/writing-your-first-plugin
+See the full guide for more information: https://kombustion.io/guides/plugins/

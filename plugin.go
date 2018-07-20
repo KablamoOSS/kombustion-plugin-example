@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/KablamoOSS/kombustion-plugin-boilerplate/resources"
+	"github.com/KablamoOSS/kombustion-plugin-example/parsers"
 	"github.com/KablamoOSS/kombustion/pkg/plugins/api"
 	"github.com/KablamoOSS/kombustion/pkg/plugins/api/types"
 )
@@ -17,7 +17,7 @@ func init() {
 	}
 	if name == "" {
 		// Update this to the name of your plugin (you repo name)
-		name = "kombustion-plugin-boilerplate"
+		name = "kombustion-plugin-example"
 	}
 }
 
@@ -29,36 +29,24 @@ func Register() []byte {
 		Prefix:  "Kablamo::Example",
 		Help: types.Help{
 			Description: "An example plugin to create a log group",
-			TypeMappings: []types.TypeMapping{
+			Types: []types.TypeMapping{
 				{
 					Name:        "Log",
 					Description: "Creates a Log Group.",
-					Config:      resources.LogConfig{},
+					Config:      parsers.LogConfig{},
 				},
 			},
 		},
 	})
 }
 
-// Resources for this plugin
-var Resources = map[string]func(
+// Parsers for this plugin
+var Parsers = map[string]func(
 	name string,
 	data string,
 ) []byte{
-	"Log": api.RegisterResource(resources.ParseExampleLog),
+	"Log": api.RegisterParser(parsers.ParseExampleLog),
 }
-
-// Outputs for this plugin
-var Outputs = map[string]func(
-	name string,
-	data string,
-) []byte{}
-
-// Mappings for this plugin
-var Mappings = map[string]func(
-	name string,
-	data string,
-) []byte{}
 
 // This function is never called, but it's required by the compiler.
 func main() {}
